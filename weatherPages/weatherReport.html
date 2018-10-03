@@ -1,0 +1,29 @@
+<div class="h2 text-info">
+  Forecast for {{ cityName }}
+</div>
+<div ng-controller = "weatherController">
+  <div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-Title">Today's Date: {{convertToDate(weatherResult.dt) | date: 'MMM d, y'}}</h3>
+          </div>
+          <div class="panel-body">
+            Daytime Temperature: {{kelvinToFahrenheit(weatherResult.main.temp)}}
+          </div>
+          <div class="panel-body">
+            Daytime Humidity: {{weatherResult.main.humidity}}
+          </div>
+          <div class="panel-body">
+            Minimum Temperature: {{kelvinToFahrenheit(weatherResult.main.temp_min)}}
+          </div>
+          <div class="panel-body">
+            Maximum Temperature: {{kelvinToFahrenheit(weatherResult.main.temp_max)}}
+          </div>
+          <div class="panel-body">
+            Speed of the wind: {{(weatherResult.wind.speed)}}
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
