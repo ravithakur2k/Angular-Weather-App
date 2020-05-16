@@ -40,7 +40,7 @@ function($scope,$resource,weatherCityService){
           $scope.weatherApi = $resource("http://api.openweathermap.org/data/2.5/weather/",{
           callback: "JSON_CALLBACK"}, {get:{method:"JSONP"}});
 
-          $scope.weatherResult = $scope.weatherApi.get({q:$scope.cityName,appid:'e6b20cdb29dd3e1271611dc84f374003'});
+          $scope.weatherResult = $scope.weatherApi.get({q:$scope.cityName,appid:'PUT IN YOUR OWN APP ID'});
           console.log($scope.weatherResult);
 
           $scope.kelvinToFahrenheit = function(kelvinDeg) {
